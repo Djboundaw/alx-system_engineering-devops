@@ -1,2 +1,2 @@
 #!/bin/bash
-sort -k7nr,7 | tr '\t' ' ' | cut -d' ' -f1 | head -n 11
+sort | tr '\t' ' ' | cut -d' ' -f1 | uniq -c | sort -k1nr | head -n 11 | sed "s/^\ *//g" | tr ' ' '\' | cut -d'\' -f2
