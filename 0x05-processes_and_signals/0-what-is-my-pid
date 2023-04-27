@@ -1,2 +1,3 @@
-#!/bin/bash
-echo $BASHPID
+#!/usr/bin/env bash
+
+echo $$
