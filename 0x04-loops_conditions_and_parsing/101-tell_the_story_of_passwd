@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#Displays content of file /etc/passwd using while loop + IFS
+
+while IFS=':' read -r username password uid gid gecos home_dir comm_shell
+do
+	echo "The user $username is part of the $gid gang,"\
+	       "lives in $home_dir and rides $comm_shell."\
+	       "$uid's place is protected by the passcode $password,"\
+	       "more info about the user here: $gecos"
+done < "/etc/passwd"
